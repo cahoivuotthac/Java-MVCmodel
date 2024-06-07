@@ -1,4 +1,4 @@
-package com.libs.lab_05.signInAndsignUp;
+package signInAndsignUp;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;

@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package com.libs.lab_05.signInAndsignUp.com.libs.lab_05;
+package QuanLiKhamBenh;
 
 /**
  *
  * @author Phan Thi Thuy Hien
  */
-public class DAO {
+public class View {
 
     /**
      * @param args the command line arguments

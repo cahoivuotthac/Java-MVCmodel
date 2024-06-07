@@ -1,4 +1,4 @@
-import com.libs.lab_05.signInAndsignUp.View;
+import signInAndsignUp.View;
 
 public class Main {
 
