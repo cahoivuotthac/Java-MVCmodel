@@ -1,5 +1,6 @@
 package signInAndsignUp;
 
+import healthCareManagement.ConnectionJDBC;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,6 +41,7 @@ public class DAO {
             pstm.setString(1, username);
             pstm.setString(2, pass);
             row = pstm.executeUpdate();
+            conn.commit();
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();

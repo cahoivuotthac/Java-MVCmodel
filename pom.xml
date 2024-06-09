@@ -18,5 +18,11 @@
             <artifactId>ojdbc11</artifactId> <!-- or ojdbc8 for older versions -->
             <version>21.3.0.0</version> <!-- Adjust version as needed -->
         </dependency>
+        <dependency>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 </project>
