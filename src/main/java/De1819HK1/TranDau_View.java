@@ -22,11 +22,15 @@ public class TranDau_View {
         ngay = new JTextField("09/12/2018");
         place = new JTextField("Địa điểm");
         
-        chuNha = new JComboBox<>(new String[]{"Chelsea"});
+        //chuNha = new JComboBox<>(new String[]{"Chelsea"}); đi thi ko cần làm vậy
+        chuNha = new JComboBox();
         chuNha.setModel(new DefaultComboBoxModel(DAO.getTenDN_DK(1)));
         
-        doiKhach = new JComboBox<>(new String[]{"Liverpool"});
+        //doiKhach = new JComboBox<>(new String[]{"Liverpool"});
+        doiKhach = new JComboBox();
         doiKhach.setModel(new DefaultComboBoxModel(DAO.getTenDN_DK(0)));
+        //đi thi nên viết: doiKhach = new JComboBox(new DefaultComboBoxModel(DAO.getTenDN_DK(0)));
+        
         ts = new JTextField("2:0");
         them = new JButton("Thêm");
         huy = new JButton("Hủy");
