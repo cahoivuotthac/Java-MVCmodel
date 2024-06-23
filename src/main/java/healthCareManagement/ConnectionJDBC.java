@@ -11,7 +11,7 @@ public class ConnectionJDBC {
     
     public static java.sql.Connection getConnection() {
         jdbcUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
-        username = "LAB05_QLKB";
+        username = "QL_NHAPHANG";
         password = "password";
 
         try {

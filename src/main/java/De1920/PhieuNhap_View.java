@@ -43,11 +43,8 @@ public class PhieuNhap_View extends JFrame {
         
         ngayNhap = new JDateChooser();
         ghiChu = new JTextField();
-        tenNcc = new JComboBox();
+        tenNcc = new JComboBox(new DefaultComboBoxModel(DAO.dsTenNcc()));
         tao = new JButton("Tạo phiếu nhập");
-        //comboBox: hiện thị ds tenNcc
-        List<String> m = DAO.dsTenNcc();
-        tenNcc.setModel(new DefaultComboBoxModel(m.toArray(String[]::new)));
         //table
         ds = new JTable(0, 1); //r, c
         dsN = new JTable(0, 2);
@@ -119,14 +116,10 @@ public class PhieuNhap_View extends JFrame {
         this.add(panel, BorderLayout.CENTER);
         
         this.setVisible(true);
-        // cho phép chỉnh sửa cột chắt lượng
-        TableCellEditor editor = new DefaultCellEditor(new JTextField());
-        dsN.getColumnModel().getColumn(1).setCellEditor(editor);
         
         PhieuNhap_Controller ac = new PhieuNhap_Controller(this);
         tenNcc.addActionListener(ac);
         tao.addActionListener(ac);
-        
         
     }
 }

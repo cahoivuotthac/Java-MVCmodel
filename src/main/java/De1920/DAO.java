@@ -22,7 +22,7 @@ public class DAO {
             p.setString(4, email);
 
             int r = p.executeUpdate();
-            if (r > 0) {
+            if (r == 1) {
                 conn.commit();
             }
             conn.close();
@@ -85,7 +85,7 @@ public class DAO {
 //            }
 
             int r = p1.executeUpdate();
-            if (r > 0) {
+            if (r == 1) {
                 conn.commit();
             }
             conn.close();
@@ -97,7 +97,7 @@ public class DAO {
         }
     }
 
-    public static List<String> dsTenNcc() {
+    public static String[] dsTenNcc() {
         List<String> l = new ArrayList<>();
         try {
             Connection conn = getConnection();
@@ -110,7 +110,7 @@ public class DAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return l;
+        return l.toArray(String[]::new);
     }
 
     public static List<String> dsSp(String tenNcc) {
@@ -165,7 +165,7 @@ public class DAO {
             p.setInt(3, sl);
             int r = p.executeUpdate();
 
-            if (r > 0) {
+            if (r == 1) {
                 conn.commit();
             }
             conn.close();
@@ -187,7 +187,7 @@ public class DAO {
             p.setDate(1, ngay);
             p.setString(2, ghichu);
             int r = p.executeUpdate();
-            if (r > 0) {
+            if (r == 1) {
                 conn.commit();
             }
             conn.close();
