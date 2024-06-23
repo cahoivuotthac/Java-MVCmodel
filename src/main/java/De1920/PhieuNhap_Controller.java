@@ -19,16 +19,13 @@ public class PhieuNhap_Controller implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        //Lấy giá trị từ JTextField, JDateChooser, JComboBox
-        java.sql.Date dateSql = new java.sql.Date(v.ngayNhap.getDate().getTime());
-        String ghiChu = v.ghiChu.getText();
-        String nccCbb = v.tenNcc.getSelectedItem().toString(); //Object converts to String
-
-        //hiển thị ds sản phẩm của NCC chọn từ comboBox vào table ds sp
-        List<String> l = DAO.dsSp(nccCbb);
+    
         if (e.getSource() == v.tenNcc) {
-
+            
+            String nccCbb = v.tenNcc.getSelectedItem().toString(); //Object converts to String
+            
+            //hiển thị ds sản phẩm của NCC chọn từ comboBox vào table ds sp
+            List<String> l = DAO.dsSp(nccCbb);
             DefaultTableModel model = new DefaultTableModel(new Object[]{"Sản phẩm"}, 0);
             for (String i : l) {
                 model.addRow(new Object[]{i});
@@ -60,6 +57,8 @@ public class PhieuNhap_Controller implements ActionListener {
 
         //nhấn button tạo để insert chi tiết pn và phiếu nhập
         if (e.getSource() == v.tao) {
+            java.sql.Date dateSql = new java.sql.Date(v.ngayNhap.getDate().getTime());
+            String ghiChu = v.ghiChu.getText();
             DAO.insertPhieuNhap(dateSql, ghiChu);
             int maPn = DAO.getMaPn(dateSql, ghiChu);
             System.out.println(maPn);
