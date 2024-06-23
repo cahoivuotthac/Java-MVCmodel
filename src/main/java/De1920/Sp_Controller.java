@@ -40,9 +40,7 @@ public class Sp_Controller implements ActionListener, KeyListener {
             maNcc = v.getMaNcc().getText();
             String tenSp = v.getTenSp().getText();
             String dongia = v.getDongia().getText();
-            if (e.getActionCommand().equals("Thêm")) {
-                DAO.insertSp(maNcc, tenSp, Integer.parseInt(dongia));
-            }
+            DAO.insertSp(maNcc, tenSp, Integer.parseInt(dongia));
         }
 
     }

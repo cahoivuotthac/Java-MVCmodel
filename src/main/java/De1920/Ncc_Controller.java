@@ -17,13 +17,12 @@ public class Ncc_Controller implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String ncc = v.getNcc().getText();
-        String dc = v.getDc().getText();
-        String sdt = v.getSdt().getText();
-        String email = v.getSdt().getText();
-
-        String them = e.getActionCommand();
-        if (e.getActionCommand().equals("Thêm")) {
+        if (e.getSource() == v.them) {
+            String ncc = v.getNcc().getText();
+            String dc = v.getDc().getText();
+            String sdt = v.getSdt().getText();
+            String email = v.getSdt().getText();
+            
             DAO.insertNhaCungCap(ncc, dc, sdt, email);
         }
     }
