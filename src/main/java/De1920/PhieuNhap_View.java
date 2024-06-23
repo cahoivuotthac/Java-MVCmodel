@@ -49,7 +49,7 @@ public class PhieuNhap_View extends JFrame {
         List<String> m = DAO.dsTenNcc();
         tenNcc.setModel(new DefaultComboBoxModel(m.toArray(String[]::new)));
         //table
-        ds = new JTable(0, 1);
+        ds = new JTable(0, 1); //r, c
         dsN = new JTable(0, 2);
         
         JLabel ngayLb = new JLabel("Ngày lập");
