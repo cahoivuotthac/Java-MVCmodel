@@ -35,7 +35,7 @@ public class TranDau_Controller implements ActionListener{
     }
     
     private void clearFields(){
-        v.tenG.setSelectedIndex(-1);
+        v.tenG.setSelectedIndex(-1); //không có mục nào được chọn trong combo box
         v.ngay.setText("");
         v.place.setText("");
         v.ts.setText("");

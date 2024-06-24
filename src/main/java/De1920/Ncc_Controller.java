@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class Ncc_Controller implements ActionListener {
 
-    private Ncc_View v;
+    private final Ncc_View v;
 
     public Ncc_Controller(Ncc_View v) {
         this.v = v;
@@ -18,10 +18,10 @@ public class Ncc_Controller implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == v.them) {
-            String ncc = v.getNcc().getText();
-            String dc = v.getDc().getText();
-            String sdt = v.getSdt().getText();
-            String email = v.getSdt().getText();
+            String ncc = v.ncc.getText();
+            String dc = v.dc.getText();
+            String sdt = v.sdt.getText();
+            String email = v.email.getText();
             
             DAO.insertNhaCungCap(ncc, dc, sdt, email);
         }

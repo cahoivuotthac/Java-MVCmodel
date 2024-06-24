@@ -12,30 +12,11 @@ import javax.swing.JTextField;
 
 public class Ncc_View extends JFrame {
 
-    public JTextField getDc() {
-        return dc;
-    }
-
-    public JTextField getEmail() {
-        return email;
-    }
-
-    public JTextField getNcc() {
-        return ncc;
-    }
-
-    public JTextField getSdt() {
-        return sdt;
-    }
-
-    public JButton getThem() {
-        return them;
-    }
-    private JTextField ncc;
-    private JTextField dc;
-    private JTextField sdt;
-    private JTextField email;
-    private JButton them;
+    JTextField ncc;
+    JTextField dc;
+    JTextField sdt;
+    JTextField email;
+    JButton them;
 
     public Ncc_View() {
         init();
@@ -114,10 +95,10 @@ public class Ncc_View extends JFrame {
         this.setVisible(true);
         Ncc_Controller ac = new Ncc_Controller(this);
 
-        getThem().addActionListener(ac);
-        getNcc().addActionListener(ac);
-        getDc().addActionListener(ac);
-        getSdt().addActionListener(ac);
-        getEmail().addActionListener(ac);
+        them.addActionListener(ac);
+        ncc.addActionListener(ac);
+        dc.addActionListener(ac);
+        sdt.addActionListener(ac);
+        email.addActionListener(ac);
     }
 }
